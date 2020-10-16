@@ -5,9 +5,13 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ master ] [flexible]
+    branches:
+    - master
+    - flexible
   pull_request:
-    branches: [ master ] [flexible]
+    branches:
+      - master
+      - flexible
 
 jobs: # какие задачи делаем
   build: # сборка
