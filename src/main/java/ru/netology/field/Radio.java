@@ -1,11 +1,22 @@
-package ru.netology;
+package ru.netology.field;
 
 public class Radio {
     private int station;
     private int volume;
+    private int quantityStation;
+
+    public Radio(int quantityStation) {
+        if (quantityStation >= 0) {
+            this.quantityStation = quantityStation;
+        } else this.quantityStation = 0;
+    }
+
+    public Radio() {
+        this.quantityStation = 10;
+    }
 
     public void increaseStation() {
-        if (station < 9) {
+        if (station < (quantityStation - 1)) {
             station++;
         } else {
             station = 0;
@@ -16,12 +27,12 @@ public class Radio {
         if (station>0) {
             station--;
         } else {
-            station = 9;
+            station = (quantityStation - 1);
         }
     }
 
     public void increaseVolume() {
-        if (volume < 10) {
+        if (volume < 100) {
             volume++;
         }
     }
@@ -37,7 +48,7 @@ public class Radio {
     }
 
     public void setVolume(int volume) {
-        if ((volume < 0) | (volume >10)) {
+        if ((volume < 0) | (volume >100)) {
            return;
         }
         this.volume = volume;
@@ -48,11 +59,19 @@ public class Radio {
     }
 
     public void setStation(int station) {
-        if ((station < 0) | (station > 9)) {
+        if ((station < 0) | (station > (quantityStation - 1))) {
             return;
         }
         this.station = station;
     }
 
+    public int getQuantityStation() {
+        return quantityStation;
+    }
 
+    public void setQuantityStation(int quantityStation) {
+        if (quantityStation >= 0) {
+            this.quantityStation = quantityStation;
+        } else this.quantityStation = 0;
+    }
 }
