@@ -3,7 +3,6 @@ package ru.netology.field;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import ru.netology.field.Radio;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -29,7 +28,6 @@ class RadioTest {
         int actual = radio.getQuantityStation();
         assertEquals(10, actual);
     }
-
 
 
     @ParameterizedTest
@@ -72,7 +70,6 @@ class RadioTest {
                     "'0','1'"},
             delimiter = ','
     )
-
     void shouldIncreaseVolume(int currentVolume, int expected) {
         Radio radio = new Radio();
         radio.setVolume(currentVolume);

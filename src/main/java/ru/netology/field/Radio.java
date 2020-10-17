@@ -8,7 +8,9 @@ public class Radio {
     public Radio(int quantityStation) {
         if (quantityStation >= 0) {
             this.quantityStation = quantityStation;
-        } else this.quantityStation = 0;
+        } else {
+            this.quantityStation = 0;
+        }
     }
 
     public Radio() {
@@ -23,8 +25,8 @@ public class Radio {
         }
     }
 
-       public void decreaseStation() {
-        if (station>0) {
+    public void decreaseStation() {
+        if (station > 0) {
             station--;
         } else {
             station = (quantityStation - 1);
@@ -48,8 +50,8 @@ public class Radio {
     }
 
     public void setVolume(int volume) {
-        if ((volume < 0) | (volume >100)) {
-           return;
+        if ((volume < 0) | (volume > 100)) {
+            return;
         }
         this.volume = volume;
     }
@@ -72,6 +74,8 @@ public class Radio {
     public void setQuantityStation(int quantityStation) {
         if (quantityStation >= 0) {
             this.quantityStation = quantityStation;
-        } else this.quantityStation = 0;
+        } else {
+            this.quantityStation = 0;
+        }
     }
 }
